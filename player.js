@@ -12,8 +12,8 @@ class Player {
     this.height = height;
     this.x = 0;
     this.y = 0;
-    this.speed = 5;
-    document.addEventListener("keydown", this.keydown.bind(this));
+    this.speed = 0;
+    document.addEventListener("keydown", this.onKeydown.bind(this));
   }
 
   draw() {
@@ -23,7 +23,7 @@ class Player {
     this.ctx.fill();
   }
 
-  getBorders() {
+  getBoundary() {
     return {
       xMin: this.x,
       xMax: this.x + this.width,
@@ -32,7 +32,7 @@ class Player {
     };
   }
 
-  keydown(e) {
+  onKeydown(e) {
     let arrow = KEYS[e.keyCode];
 
     if (arrow === "left") {
