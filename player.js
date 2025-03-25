@@ -12,7 +12,7 @@ class Player {
     this.height = height;
     this.x = 0;
     this.y = 0;
-    this.speed = 5;
+    this.speed = 0;
     document.addEventListener("keydown", this.onKeydown.bind(this));
   }
 

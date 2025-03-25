@@ -34,11 +34,11 @@ class Game {
     this.ctx.beginPath();
     this.ctx.font = "48px serif";
     this.ctx.fillStyle = "red";
-    this.ctx.fillText("You lose!", this.width / 2, this.height / 2);
+    this.ctx.fillText("Game Over!", this.width / 2, this.height / 2);
   }
 
   drawBoundary() {
-    this.ctx.beginPath();
+    // this.ctx.beginPath();
     this.ctx.rect(0, 0, this.width, this.height);
     this.ctx.stroke();
   }
